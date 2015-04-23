@@ -1,0 +1,10 @@
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\MarkPaemaaShowCaseEntityFramework.dll.config
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\MarkPaemaaShowCaseEntityFramework.dll
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\MarkPaemaaShowCaseEntityFramework.pdb
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\EntityFramework.dll
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\EntityFramework.xml
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\obj\Debug\MarkPaemaaShowCaseEntityFramework.dll
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\obj\Debug\MarkPaemaaShowCaseEntityFramework.pdb
+C:\Projects\MarkPaemaa\MarkPaemaaShowCase\MarkPaemaaShowCaseEntityFramework\obj\Debug\MarkPaemaaShowCaseEntityFramework.csprojResolveAssemblyReference.cache

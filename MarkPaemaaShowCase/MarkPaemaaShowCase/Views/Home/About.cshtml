@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-md-4 sidebar sidebar-left">
+
+            <div class="row widget">
+                <div class="col-xs-12">
+                    <h4>Me and my gorgeous daughter</h4>
+                    <p><img id="imageProfile" src="~/Images/Profile.jpg" alt="" class="halfVisible"></p>
+                    <p>My favourite profile picture showing the bond between my daughter and myself.</p>
+                </div>
+            </div>
+
+        </aside>
+        <!-- /Sidebar -->
+
+
+        <!-- Article main content -->
+        <article class="col-md-8 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+            <p>
+                This site is a work in progress, a labour of love, a way of showing the world my skills in the area of software development.  Scattered throughout this site 
+                are little snippets of code that I've written to enhance your experience.
+            </p>
+            <br>
+            <p>
+                It's also an area I play with code, leave tidbits of helpful information and keep an updated resume / CV.
+            </p>
+            <p>
+                This site is running on
+                <ul id="serverParts">
+                    <li>Windows 8.1 Professional</li>
+                    <li>IIS 8.5</li>
+                    <li>SQL Server 2012</li>
+                    <li>ASP .NET MVC 5</li>
+                    <li>Entity Framework 6</li>
+                    <li>Bootstrap CSS and Javascript</li>
+                    <li>Built using Microsoft Visual Studio Professional 2013 Release 4</li>
+                    <li>Inside a VMWare Virtual Machine</li>
+                </ul>
+
+            </p>
+        </article>
+    </div>
+
+    <!-- Lets add a little animation to the page -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#imageProfile").mouseenter(function (e) {
+                $(this).toggleClass('halfVisible');
+            }).mouseout(function (e) {
+                $(this).toggleClass('halfVisible')
+            });
+            $("#serverParts").on('mouseenter', 'li', function () {
+                $(this).toggleClass('boldText');
+            }).on('mouseleave', 'li', function () {
+                $(this).toggleClass('boldText');
+            });
+
+        });
+    </script>
+
+</div>

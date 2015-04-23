@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "Technologies";
+    ViewBag.Message = "Message for Technologies";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+
+            <ul>
+                <li>@Html.ActionLink("ASP .Net Identity", "Index", "Identity", new { area = "Technologies" }, null)</li>
+                <li>@Html.ActionLink("MSSQL", "Index", "MSSQL", new { area = "Technologies" }, null)</li>
+                <li>@Html.ActionLink("MVC 5 Areas", "Index", "MVCAreas", new { area = "Technologies" }, null)</li>
+            </ul>
+
+        </article>
+    </div>
+</div>

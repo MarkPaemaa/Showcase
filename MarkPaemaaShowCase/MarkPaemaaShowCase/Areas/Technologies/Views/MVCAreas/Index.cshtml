@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "MVC Areas";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+            <h2>Using Site Layout</h2>
+            <p>
+                When you create a new Area in MVC, it automatically creates a new Shared Layout page - located in the Shared folder of the Views folder under the Area.
+                The _ViewStart.cshtml file points to this shared layout file - which will be the default view and not any tailored view template you may have created
+                at the root of your website.
+            </p>
+            <p>
+                To rectify this, you can replace the contents of the _ViewStart.cshtml to this <br />
+                <code>
+                    @@{<br />
+                    Layout = "~/Views/Shared/_Layout.cshtml";<br />
+                    }
+                </code>
+            </p>
+        </article>
+    </div>
+</div>
+

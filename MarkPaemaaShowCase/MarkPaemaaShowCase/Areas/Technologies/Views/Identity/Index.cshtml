@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "ASP .Net Identity";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+
+
+            <p>
+                When selecting a new MSSQL database, ASP .Net Identity will create the tables (if the do not already exist) on the first
+                attempt by the ASP .Net Identity conect to interact with the database - like attempting to login.
+            </p>
+            <img src="~/Images/IdentityTables.png" />
+        </article>
+    </div>
+</div>
+

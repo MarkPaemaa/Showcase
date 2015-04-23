@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "MSSQL";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+
+            <h2>Connection String</h2>
+            <p>
+                When moving from a LOCALDB on a default Project for MVC to a dedicated MSSQL database and nice way to locate the correct connection string is to use
+                the Connect to Database method for a Database Project - and then extract the information from there.  One way to get to this is from the
+                Schema Compare option, which provides you with this dialog :
+            </p>
+            <img src="~/Images/MSSQLConnectionProperties.png" />
+            <p>
+                Then clicking on the Advanced Properties button at the bottom gives you access to a premade connection string at the bottom:
+            </p>
+            <img src="~/Images/MSSQLConnectionPropertiesAdvancedSettings.png" />
+            <p>
+                Note : you may need to add <code>Password=</code> to the connection string
+            </p>
+        </article>
+    </div>
+</div>
+

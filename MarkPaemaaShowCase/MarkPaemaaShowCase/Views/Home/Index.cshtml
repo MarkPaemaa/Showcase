@@ -1,0 +1,125 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@RenderPage("~/Views/Shared/_Header.cshtml")
+
+
+<div class="container body-content" id="body">
+
+    <!-- Intro -->
+    <div class="container text-center">
+        <br> <br>
+        <h2 class="thin">Mark Paemaa's developer Showcase</h2>
+        <p class="text-muted">
+            This site is a showcase of Mark Paemaa's software development skill, experience and talents
+        </p>
+    </div>
+    <!-- /Intro-->
+    <!-- Highlights - jumbotron -->
+    <div class="jumbotron top-space">
+        <div class="container">
+
+            <h3 class="text-center thin">What is this all about?</h3>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6 highlight large-click-group" data-toggle="tooltip" data-placement="top" title="Check out my little online play area, for code snippets and experimentational code.">
+                    <a href="@Url.Action("Index", "Home", new { area = "Sandbox"}, null)">
+                        <div class="h-caption"><h4><i class="fa fa-cogs fa-5"></i>SandBox</h4></div>
+                        <div class="h-body text-center">
+                            <p>A place where I put some coding ideas I'm working on - to try out some new technolgies and get up to speed.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight large-click-group" data-toggle="tooltip" data-placement="top" title="I've put together a list of experiences I've had during my career in software development.">
+                    <a href="@Url.Action("Index", "Home", new { area = "Experience"}, null)">
+                        <div class="h-caption"><h4><i class="fa fa-flash fa-5"></i>Experience</h4></div>
+                        <div class="h-body text-center">
+                            <p>All the little querks I have found through my experience I will document here for everyone to benefit from</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight large-click-group" data-toggle="tooltip" data-placement="top" title="Have a look the list of technologies I've worked on and some of the solutions I've found.">
+                    <a href="@Url.Action("Index", "Home", new { area = "Technologies"}, null)">
+                        <div class="h-caption"><h4><i class="fa fa-heart fa-5"></i>Technologies</h4></div>
+                        <div class="h-body text-center">
+                            <p>All the technologies I have worked on I will document here and detail what I loved and disliked.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 highlight large-click-group" data-toggle="tooltip" data-placement="top" title="If you would like to download a copy of my resume, this is where to go.">
+                    <a href="@Url.Action("Index", "Home", new { area = "Resume"}, null)">
+
+                        <div class="h-caption"><h4><i class="fa fa-smile-o fa-5"></i>Resume / CV</h4></div>
+                        <div class="h-body text-center">
+                            <p>Details of my work experience and the skills I needed will be listed here.</p>
+                        </div>
+                    </a>
+                </div>
+            </div> <!-- /row  -->
+
+        </div>
+    </div>
+    <!-- /Highlights -->
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Why?</h2>
+            <p>
+                Nothing beats showing real life examples that work and also sharing the code for it.  This site
+                has been crafted over time adding many latest features that I (this is where I changeto first person) have had experience with as a
+                means to showcase, document and explore.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Please Explore</h2>
+            <p>Feel free to explore all areas of the site, which I have personally hand crafted.  Check out the menu options, and also follow all the links. </p>
+        </div>
+        <div class="col-md-4">
+            <h2>Feeback</h2>
+            <p>I would love any fedback that you might like to provide</p>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#feedbackModal">
+                Give some Feedback
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form class="form-horizontal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Feeback</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="txtName" class="col-sm-2 control-label">Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control focus" id="txtName" placeholder="Your Name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtEmailAddress" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="txtEmailAddress" placeholder="name@company.com">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtFeedback" class="col-sm-2 control-label">Feedback</label>
+                        <div class="col-sm-10">
+                            <textarea id="txtFeedback" class="form-control" rows="10"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Send Feedback</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

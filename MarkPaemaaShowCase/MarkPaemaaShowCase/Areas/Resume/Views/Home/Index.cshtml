@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Resume";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+            <article>
+                <p>
+                    Due to my experience, I am capable of 2 types of roles - a Senior Software Developer and a Team Leader.  I actually do not have a preference as long
+                    as the team is a great team.  I enjoy being a Team Player as much as I do a Team Leader.  This is why there are several versions of my CV:
+                </p>
+            </article>
+
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Team Leader Resumes
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                                Download Team Lead CV @Html.ActionLink("PDF", "Download", new { area = "", resumeType = "TeamLeaderPDF" }, new {  @target = "_blank", @class = "btn btn-success" }  )  
+                                                      @Html.ActionLink("DOCX", "Download", new { area = "", resumeType = "TeamLeaderDocx" }, new { @target = "_blank", @class = "btn btn-info" })
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Senior Developer Resumes
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                                Download Senior Developer CV  @Html.ActionLink("PDF", "Download", new { area = "", resumeType = "DevPDF" }, new { @target = "_blank", @class="btn btn-success" })
+                                                              @Html.ActionLink("DOCX", "Download", new { area = "", resumeType = "DevDocx" }, new { @target = "_blank", @class="btn btn-info" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>

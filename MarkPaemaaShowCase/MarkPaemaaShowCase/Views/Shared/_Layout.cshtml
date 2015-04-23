@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mark Paemaa Showcase</title>
+    <link rel="shortcut icon" href="images/gt_favicon.png?ver=2">
+
+    <link rel="stylesheet" media="screen" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css"> 
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+
+    <!-- Custom styles for our template -->
+    <link rel="stylesheet" href="~/Content/bootstrap-theme.css" media="screen">
+    <link rel="stylesheet" href="~/Content/main.css?ver=5" />
+
+    <script src="~/Scripts/jquery-2.1.3.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="~/Scripts/html5shiv.js"></script>
+    <script src="~/Scripts/respond.min.js"></script>
+    <![endif]-->
+
+    @* @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr") *@
+
+</head>
+<body class="home">
+    <div class="navbar navbar-inverse navbar-fixed-top headroom">
+        <div class="container">
+            <div class="navbar-header" data-toggle="tooltip" data-placement="bottom" title="It's my unqiue name, and the title of this site">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Mark Paemaa", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li data-toggle="tooltip" data-placement="bottom" title="Takes you back to the Home page to start a new journey">@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="More information about me and this site">@Html.ActionLink("About", "About", "Home", new { area = "" }, null)</li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="How to contact me in various ways">@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, null)</li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="Different types of Technologies I've had experience with">@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="My online resume - history of my experiences">@Html.ActionLink("Experience", "Index", "Home", new { area = "Experience" }, null)</li>
+                    <li data-toggle="tooltip" data-placement="bottom" title="Play with some sample code I've written">@Html.ActionLink("Sandbox", "Index", "Home", new { area = "Sandbox" }, null)</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <footer id="footer" class="top-space">
+        <div class="footer1">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">Contact</h3>
+                        <div class="widget-body">
+                            <p>
+                                +61 403 602 546<br>
+                                <a href="mailto:#">mark@paemaa.com</a><br>
+                                <br>
+                                PO Box 3388, Asquith, NSW 2077
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 widget">
+                        <h3 class="widget-title">Follow me</h3>
+                        <div class="widget-body">
+                            <p class="follow-me-icons">
+                                <a href="https://twitter.com/MarkPaemaa" target="_blank"><i class="fa fa-twitter fa-2"></i></a>
+                                <a href=""><i class="fa fa-dribbble fa-2"></i></a>
+                                <a href=""><i class="fa fa-github fa-2"></i></a>
+                                <a data-toggle="modal" data-target="#facebookModal"><i class="fa fa-facebook fa-2"></i></a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 widget">
+                        <h3 class="widget-title">Life is about Balance</h3>
+                        <div class="widget-body">
+                            <p>Even thought I have spent many of my years in the software development space, I have also lived and felt alive through other adventures.</p>
+                            <p>This site is purely about my professional efforts in the areas of software development, but if you get to know me I'd be happy to share with you some of my other interests.</p>
+                        </div>
+                    </div>
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
+
+        <div class="footer2">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="simplenav">
+                                @Html.ActionLink("Home", "Index", "Home") |
+                                @Html.ActionLink("About", "About", "Home") |
+                                @Html.ActionLink("Contact", "Contact", "Home") |
+                                <b>@Html.ActionLink("Register", "Register", "Account")</b>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 widget">
+                        <div class="widget-body">
+                            <p class="text-right">
+                                @DateTime.Now.Year - Mark Paemaa
+                            </p>
+                        </div>
+                    </div>
+
+                </div> <!-- /row of widgets -->
+            </div>
+        </div>
+
+    </footer>	
+
+    <div id="facebookModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Facebook Access</h4>
+                </div>
+                <div class="modal-body">
+                    Only my personal friends see my Facebook. Lets connect!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript libs are placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    @Scripts.Render("~/Scripts/headroom.min.js")
+    @Scripts.Render("~/Scripts/jQuery.headroom.min.js")
+    @Scripts.Render("~/Scripts/template.js")
+
+    @*
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap") *@
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+        });
+    </script>
+
+</body>
+</html>

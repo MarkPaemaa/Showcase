@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+
+<header id="head" class="secondary"></header>
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+            <address>
+                <strong>Mobile</strong><br />
+                +61 403 602 546<br /><br />
+
+                <strong>Postal</strong><br />
+                PO BOX 3388<br />
+                Asquith NSW 2077<br />
+                Sydney AUSTRALIA<br />
+            </address>
+
+            <address>
+                <strong>Email</strong><br />
+                   <a href="mailto:mark@paemaa.com">mark@paemaa.com</a><br />
+            </address>
+
+            <address>
+                <strong>Skype</strong><br />
+                Mark.Paemaa
+                <div id="SkypeButton_Call_Mark.Paemaa_1" class="btn-group">
+                    <script type="text/javascript">
+                        Skype.ui({
+                            "name": "call",
+                            "element": "SkypeButton_Call_Mark.Paemaa_1",
+                            "participants": ["Mark.Paemaa"],
+                        });
+                    </script>
+                </div>
+            </address>
+
+        </article>
+    </div>
+
+
+</div>

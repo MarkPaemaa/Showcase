@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [mark]
+    WITH PASSWORD = N'h8yi{cdnv<zqv|_Tfyszt&4{msFT7_&#$!~<v8mzkDdyFfxb', SID = 0x500D4D46BE6F744AACF46513B2103E00, DEFAULT_DATABASE = [MarkPaemaaShowcase], DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
