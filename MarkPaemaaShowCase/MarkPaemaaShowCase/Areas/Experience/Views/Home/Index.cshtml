@@ -15,6 +15,10 @@
             <header class="page-header">
                 <h1 class="page-title">@ViewBag.Title</h1>
             </header>
+
+            <p>In time I will be creating an online version of my resume here.</p>
+            <p>In the meantime, you can download my resume from here</p>
+            @Html.ActionLink("DOWNLOAD CV", "Index", "Home", new { area = "Resume" }, new { @class = "btn btn-primary btn-lg", @role = "button" })
             </article>
     </div>
 </div>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Interfaces in C#";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+
+
+            <p>
+                We create interfaces using the <i>interface</i> keyword. Just like classes, interfaces also contains properties, methods, delegates or events, but only declarartions and 
+                no implementations.
+            </p>
+            <p>You receive a compile time error if you fail to provide implementations for any interface member.</p>
+            <p>Interface members are public by default and they don't allow explicit access modifiers.</p>
+            <p>Interfaces cannot contain fields.</p>
+            <p>If a class or a struct inherits from an interface, it must provide implementation for all interfcace members, otherwise we get a compiler error</p>
+            <p>A class or a struct can inherit from more than one interface at the same time. A class cannot inherit from more than once class at the same time.</p>
+            <p>Interfaces can inherit from one another. A class that inherits an interface must provide implementation for all interface members in the entire interface 
+            inheritance chain.</p>
+            <p>We cannot create an instance of an interface, but an interface reference variable can poitn to a derived class object.</p>
+            <p>Explicit interfaces are where 2 interfaces share the same function and a class implements both and needs to explicitly specify which method
+            it is implementing</p>
+        </article>
+    </div>
+</div>
+

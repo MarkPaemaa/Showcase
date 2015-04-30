@@ -1,0 +1,157 @@
+﻿@{
+    ViewBag.Title = "C#";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Difference between IEnumerable and IEnumerator
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            <p>IEnumerable and IEnumerator are easily misunderstood</p>
+                            <p>
+                                <pre class="language-csharp"><code class="language-csharp">
+                    List&lt;int&gt; ages = new List&lt;int&gt;();
+                    ages.Add(10);
+                    ages.Add(20);
+                    ages.Add(30);
+                    ages.Add(40);
+                    ages.Add(50);
+                    
+                    // The ages list using IEnumerable
+                    IEnumerable&lt;int&gt; agesEnum = (IEnumerable&lt;int&gt;)ages;
+                    foreach (int i in agesEnum)
+                    {
+                         Console.WriteLine(i);
+                    }
+                    // The ages list using IEnumerator
+                    // IEnumerator as a state and remembers a 'Current' item
+                    IEnumerator&lt;int&gt; agesEnumerator = ages.GetEnumerator();
+                    while (agesEnumerator.MoveNext())
+                    {
+                        Console.WriteLine(agesEnumerator.Current.ToString());
+                    }                  
+                                </code></pre>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collection Types
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            <ul>
+                                <li>Indexed Based (Array, List)</li>
+                                <li>Key Value Based (Hastable, SortedList)</li>
+                                <li>Prioritized Collection (Stacks, Queues)</li>
+                                <li>Specialized Collection (String Collections, Hybrid Dictionary)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Yield
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            <p>The keyword <code>Yield</code> in C# helps us to do custom stateful iteration over a collection.</p>
+                            <pre class="language-csharp"><code class="language-csharp">
+    class YieldExample
+    {
+        static List&lt;int&gt; ages = new List&lt;int&gt;();
+                                    
+        static void AddInitialAgesToList()
+        {
+            ages.Add(8);
+            ages.Add(12);
+            ages.Add(35);
+            ages.Add(15);
+            ages.Add(40);
+            ages.Add(55);
+        }
+        static IEnumerable&lt;int&gt; FilterAbove20()
+        {
+            foreach (int i in ages)
+            {
+                if (i > 20) 
+                {
+                    yield return i;   // This is stateful 
+                                        // When reentering will continue from index
+                }
+            }
+        }
+        static void Main(string[] args)
+        {
+            AddInitialAgesToList();
+                                        
+            foreach (int i in FilterAbove20())
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine(); // pause to see
+        }
+    }
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingAccessModifiers">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseAccessModifiers" aria-expanded="false" aria-controls="collapseAccessModifiers">
+                                Access Modifiers
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseAccessModifiers" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingAccessModifiers">
+                        <div class="panel-body">
+                            <p>Access Modifiers are keywords used to specify the declared accessiblilty of a member or type.</p>
+                            <ul>
+                                <li><strong>public</strong> - Access is not restricted</li>
+                                <li><strong>protected</strong> - Access is limited to the containing class or types derived from the containing class</li>
+                                <li><strong>internal</strong> - Access is limited to the current assembly</li>
+                                <li><strong>protected internal</strong> - Access is limited to the current assembly or types derived from the containing class</li>
+                                <li><strong>private</strong>- Access is li,ited to the containing type</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+

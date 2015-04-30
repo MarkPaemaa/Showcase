@@ -181,10 +181,14 @@
     <Compile Include="Areas\Sandbox\Controllers\HomeController.cs" />
     <Compile Include="Areas\Sandbox\Controllers\TechnologiesController.cs" />
     <Compile Include="Areas\Sandbox\SandboxAreaRegistration.cs" />
+    <Compile Include="Areas\Technologies\Controllers\CSharpController.cs" />
     <Compile Include="Areas\Technologies\Controllers\HomeController.cs" />
     <Compile Include="Areas\Technologies\Controllers\IdentityController.cs" />
+    <Compile Include="Areas\Technologies\Controllers\InterfacesController.cs" />
     <Compile Include="Areas\Technologies\Controllers\MSSQLController.cs" />
     <Compile Include="Areas\Technologies\Controllers\MVCAreasController.cs" />
+    <Compile Include="Areas\Technologies\Controllers\OODController.cs" />
+    <Compile Include="Areas\Technologies\Controllers\SOLIDPrinciplesController.cs" />
     <Compile Include="Areas\Technologies\TechnologiesAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -205,6 +209,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\main.css" />
+    <Content Include="Content\prism.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -256,6 +261,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Areas\Technologies\Views\CSharp\Index.cshtml" />
+    <Content Include="Areas\Technologies\Views\SOLIDPrinciples\Index.cshtml" />
+    <Content Include="Areas\Technologies\Views\OOD\Index.cshtml" />
+    <Content Include="Areas\Technologies\Views\Interfaces\Index.cshtml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.3.js" />
     <Content Include="Scripts\jquery-2.1.3.min.js" />
@@ -268,6 +277,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\npm.js" />
+    <Content Include="Scripts\prism.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
@@ -311,6 +321,7 @@
     <Content Include="Views\Shared\_Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\CodeSnippets\" />
     <Folder Include="Areas\Experience\Models\" />
     <Folder Include="Areas\Experience\Views\Shared\" />
     <Folder Include="Areas\Resume\Models\" />

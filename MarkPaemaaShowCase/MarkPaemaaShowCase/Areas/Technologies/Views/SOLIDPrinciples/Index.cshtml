@@ -1,0 +1,154 @@
+﻿@{
+    ViewBag.Title = "S.O.L.I.D. Principles in .Net/C#";
+}
+
+<header id="head" class="secondary"></header>
+
+<div class="container body-content" id="body">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
+        <li>@Html.ActionLink("Technologies", "Index", "Home", new { area = "Technologies" }, null)</li>
+        <li class="active">@ViewBag.Title</li>
+    </ol>
+
+    <div class="row">
+        <!-- Article main content -->
+        <article class="col-sm-9 maincontent">
+            <header class="page-header">
+                <h1 class="page-title">@ViewBag.Title</h1>
+            </header>
+
+
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSummary">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSummary" aria-expanded="false" aria-controls="collapseSummary">
+                                Summary
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSummary" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingSummary">
+                        <div class="panel-body">
+                            <p>SOLID principles are just principles and not connected to a particular technology or framework that you can download.</p>
+                            <p></p>
+                            <ul>
+                                <li>S : SRP : Single Reponsibility Principle</li>
+                                <li>O : OCP : Open/Closed Principle</li>
+                                <li>L : LSP : Liskov's Substitution Principle</li>
+                                <li>I : ISP : Interface Segregation Principle</li>
+                                <li>D : DIP : Dependency Inversion Principle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingSRP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSRP" aria-expanded="false" aria-controls="collapseSRP">
+                                S : SRP : Single Reponsibility Principle
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSRP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSRP">
+                        <div class="panel-body">
+                            <p>A class should have only one reason to change.</p>
+                            <p>There can be only one requirement that, when changed, will cause a class to change.</p>
+                            <p>Depending on systems we are working with, SRP could come out with different solutions for the same things 
+                            in different scenarios (for example if you wanted to use a repository but do different things for read and write)</p>
+                            <p>Benefits : bits and pieces can be switched out without code modifications (small components easily switched out). Very small classes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingOCP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOCP" aria-expanded="false" aria-controls="collapseOCP">
+                                O : OCP : Open/Closed Principle
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOCP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOCP">
+                        <div class="panel-body">
+                            <p>Builds onto the Single Responsibility Principle.</p>
+                            <p>Software entities should be open for extension, but closed for modification.</p>
+                            <p>Once a class is done, it is done! You do not modify it at all.  Once a requirement changes you do not change your class, you make a new 
+                            class, inherit from your old class and make your changes in the new class and then you start testing that class.</p>
+                            <p>Benefit : Unit tests will not break if you are following Open/Closed Principle.  Code does not need to be changed.</p>
+                            <p>Meyer vs. Polymorphic.  Meyer said that you can change a class if there is a bug in it. Polymorphic came later - says we don't have to inherit from specific 
+                            implementation but we can inherit from a abstract base class or an interface.</p>
+                            <p>How much do you make virtual at ths start? You need to have a good idea at the start of how much you want to make virtual in your base classes to override.</p>
+                            <p>How does this work with abstract base classes? When you implement it has to be clear as the intent.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingLSP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseLSP" aria-expanded="false" aria-controls="collapseLSP">
+                                L : LSP : Liskov's Substitution Principle
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseLSP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingLSP">
+                        <div class="panel-body">
+                            <p>Barbara Liskov keynote : "Data abstraction and hierarchy"</p>
+                            <p>Let q(x) be a property provable about objects x of type T. Then q(y) should be provable for objects y of 
+                            type S where S is a subtype of T</p>
+                            <p>A subclass should behave in such a way that it will not cause problems when used instead of a superclass. 
+                            i.e. dont break class's that inherit this class</p>
+                            <p>Contravariance of method arguments in a sub class : If I have a class, create a new class that inherits from that class,
+                            I am allowed to change the input argument to my method in such a way that they accept a base class of the arguements that my
+                            base class accepted. Any input parameter that can be passed into the type can be passed to the parent type.</p>
+                            <p>  Covariance of return types in the sub class : the return value of my method is allowed to be any type that is the
+                            same as my parent of the decendant class.</p>
+                            <p>This is virtually impossible to do in C#.  Pointers can do it, but inheritance is ok.</p>
+                            <p>No new exception types are allowed to be thrown, unless they are in sub-classes of the previously used ones.</p>
+                            <p>Preconditions cannot be strengthened in a subtype</p>
+                            <p>Postconditions cannot be weakened in a subtype</p>
+                            <p>This history contraint - you cannot make a inmutable class mutable.</p>
+                            <p>If you follow this strictly you will be able to plug in new implementations without breaking existing applications.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingISP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseISP" aria-expanded="false" aria-controls="collapseISP">
+                                I : ISP : Interface Segregation Principle
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseISP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingISP">
+                        <div class="panel-body">
+                            <p>Clients should not be forced to depend upon interfaces that they don't use.</p>
+                            <p>Breaking down interfaces in smaller pieces make them easier to implement, and
+                            offers more control over who sees what.</p>
+                            <p>You can combine interfaces into "super interfaces" but watch that you might break SRP</p>
+                            <p>Benefits : tiny interfaces, easy to use, swap out etc</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingDIP">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDIP" aria-expanded="false" aria-controls="collapseDIP">
+                                D : DIP : Dependency Inversion Principle
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDIP" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDIP">
+                        <div class="panel-body">
+                            <p>A. High-level modules should not depend on low-level modules. Both should depend on abstractions.</p>
+                            <p>B. Abstractions should not depend upon details. Details should depend upon abstractions.</p>
+                            <p>By making sure classes don't depend on specific implementations, it becomes easy to change things around.</p>
+                            <p>Microsoft Service Locator pattern - arguement is that it gives access to all services which is too much, but it's up to the implementer. </p>
+                            <p>Benefits : Switching out bits and pieces without having to make changes to code is very powerful. With Unity etc, can be done in XML config files.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</div>
+

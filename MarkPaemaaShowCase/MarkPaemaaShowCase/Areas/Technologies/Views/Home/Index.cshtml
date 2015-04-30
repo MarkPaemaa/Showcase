@@ -18,12 +18,66 @@
                 <h1 class="page-title">@ViewBag.Title</h1>
             </header>
 
-            <ul>
-                <li>@Html.ActionLink("ASP .Net Identity", "Index", "Identity", new { area = "Technologies" }, null)</li>
-                <li>@Html.ActionLink("MSSQL", "Index", "MSSQL", new { area = "Technologies" }, null)</li>
-                <li>@Html.ActionLink("MVC 5 Areas", "Index", "MVCAreas", new { area = "Technologies" }, null)</li>
-            </ul>
-
+            <p>Here you will find some notes on technologies, including tips and tricks, blog entries and some explanations that I like to refer to.</p>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingLanguages">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseLanguages" aria-expanded="true" aria-controls="collapseLanguages">
+                                Software Languages
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseLanguages" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingLanguages">
+                        <div class="panel-body">
+                            <ul>
+                                <li>@Html.ActionLink("C#", "Index", "CSharp", new { area = "Technologies" }, null)</li>
+                            </ul>
+                            <p>ASP .NET</p>
+                            <ul>
+                                <li>@Html.ActionLink("ASP .Net Identity", "Index", "Identity", new { area = "Technologies" }, null)</li>
+                                <li>@Html.ActionLink("MVC 5 Areas", "Index", "MVCAreas", new { area = "Technologies" }, null)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingFrameworks">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFrameworks" aria-expanded="false" aria-controls="collapseFrameworks">
+                                Patterns and Practices / Frameworks
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseFrameworks" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFrameworks">
+                        <div class="panel-body">
+                            <ul>
+                                <li>@Html.ActionLink("Interfaces in C#", "Index", "Interfaces", new { area = "Technologies" }, null)</li>
+                                <li>@Html.ActionLink("Object Oriented Design", "Index", "OOD", new { area = "Technologies" }, null)</li>
+                                <li>@Html.ActionLink("S.O.L.I.D. Principles", "Index", "SOLIDPrinciples", new { area = "Technologies" }, null)</li>
+                                <li>Inversion of Control</li>
+                                <li>Dependency Injection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="headingDatabases">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseDatabases" aria-expanded="false" aria-controls="collapseDatabases">
+                                Databases
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDatabases" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingDatabases">
+                        <div class="panel-body">
+                            <ul>
+                                <li>@Html.ActionLink("MSSQL", "Index", "MSSQL", new { area = "Technologies" }, null)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </article>
     </div>
 </div>
