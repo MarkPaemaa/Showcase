@@ -1,9 +1,5 @@
 C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\bin\Debug\MarkPaemaaShowcaseDatabase.dacpac
 C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\bin\Debug\ShowCaseDatabase.dll
 C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\bin\Debug\ShowCaseDatabase.pdb
-C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\obj\Debug\Model.xml
-C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\obj\Debug\refactor.xml
-C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\obj\Debug\postdeploy.sql
-C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\obj\Debug\predeploy.sql
 C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\obj\Debug\ShowCaseDatabase.dll
 C:\Projects\MarkPaemaa\MarkPaemaaShowCase\ShowCaseDatabase\obj\Debug\ShowCaseDatabase.pdb
